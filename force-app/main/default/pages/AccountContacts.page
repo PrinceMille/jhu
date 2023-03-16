@@ -1,0 +1,65 @@
+<apex:page standardController="Account" extensions="AccountContactsExt">
+
+
+    <apex:form >
+        
+        <apex:pageBlock title="{!Account.Name +' - Contacts'}" id="pbId">
+        
+                <apex:pageBlockTable value="{!contacts}" var="conWrap">
+                
+                    <apex:column headerValue="Action">
+                        <apex:inputCheckbox value="{!conWrap.isTrue}" />
+                    </apex:column>
+                
+                    <apex:column value="{!conWrap.con.FirstName}"/>
+                    <apex:column value="{!conWrap.con.LastName}"/>
+                    
+                    <apex:column headerValue="{!$ObjectType.Contact.Fields.Email.label}">
+                    
+                        <apex:inputField value="{!conWrap.con.Email}"/>
+                    
+                    </apex:column>
+                                       
+                    <apex:column value="{!conWrap.con.MobilePhone}"/>
+                </apex:pageBlockTable>
+                
+                <apex:pageBlockButtons location="top">
+                
+                    <apex:commandButton value="Save" action="{!saveCons}"/>
+                
+                </apex:pageBlockButtons>
+                
+                <apex:pageMessage severity="ERROR">
+                </apex:pageMessage>
+                <apex:pageBlockSection title="Compose Email" columns="1">
+                
+                     <apex:pageBlockSectionItem >
+                     
+                         <apex:outputLabel value="Subject" >
+                         <apex:inputText value="{!subject}"/>
+                         </apex:outputLabel>
+                         
+                     </apex:pageBlockSectionItem>
+                       
+                     <apex:pageBlockSectionItem >
+                         
+                         <apex:outputLabel value="Body">
+                         <apex:inputText value="{!emailBody}"/>
+                         </apex:outputLabel>
+                     
+                     </apex:pageBlockSectionItem>
+                     
+                     
+                     <apex:pageBlockSectionItem >
+                         
+                         <apex:commandButton value="Send Email" action="{!sendEmail}"/>
+                     
+                     </apex:pageBlockSectionItem>
+                
+                </apex:pageBlockSection>    
+            
+        </apex:pageBlock>
+
+    </apex:form>
+ 
+</apex:page>

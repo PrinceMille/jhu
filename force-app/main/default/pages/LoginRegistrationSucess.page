@@ -1,0 +1,16 @@
+<apex:page controller="LoginRegistrationSuccessCtrl" >
+
+    <apex:pageMessage summary=" You have been resgistered successfully" severity="confirm" strength="3" />
+    
+    <apex:outputPanel >
+         Please <apex:outputLink value="/apex/LoginHome">  click here </apex:outputLink> to go back to login otherwise automaticall will redirect
+    </apex:outputPanel> 
+    
+    <apex:form >
+           
+      <apex:actionPoller interval="6" action="{!redirect}" />
+    
+    </apex:form>
+     
+    
+</apex:page>

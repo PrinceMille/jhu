@@ -1,0 +1,70 @@
+{
+  "status": 0,
+  "result": [
+    {
+      "createdById": "0055g00000ENGUyAAP",
+      "createdByName": "Prince Varghese V",
+      "createdDate": "2022-11-11T10:44:36.000Z",
+      "fileName": "aura/testaura",
+      "fullName": "testaura",
+      "id": "0Ab5g000005u4RJCAY",
+      "lastModifiedById": "0055g00000ENGUyAAP",
+      "lastModifiedByName": "Prince Varghese V",
+      "lastModifiedDate": "2022-11-14T15:16:42.000Z",
+      "manageableState": "unmanaged",
+      "type": "AuraDefinitionBundle"
+    },
+    {
+      "createdById": "0055g00000ENGUyAAP",
+      "createdByName": "Prince Varghese V",
+      "createdDate": "2022-09-16T12:24:30.000Z",
+      "fileName": "aura/setExpId",
+      "fullName": "setExpId",
+      "id": "0Ab5g000004cBgXCAU",
+      "lastModifiedById": "0055g00000ENGUyAAP",
+      "lastModifiedByName": "Prince Varghese V",
+      "lastModifiedDate": "2022-11-14T15:16:42.000Z",
+      "manageableState": "unmanaged",
+      "type": "AuraDefinitionBundle"
+    },
+    {
+      "createdById": "0055g00000ENGUyAAP",
+      "createdByName": "Prince Varghese V",
+      "createdDate": "2022-09-16T12:24:31.000Z",
+      "fileName": "aura/selfRegister",
+      "fullName": "selfRegister",
+      "id": "0Ab5g000004cBgaCAE",
+      "lastModifiedById": "0055g00000ENGUyAAP",
+      "lastModifiedByName": "Prince Varghese V",
+      "lastModifiedDate": "2022-11-14T15:16:42.000Z",
+      "manageableState": "unmanaged",
+      "type": "AuraDefinitionBundle"
+    },
+    {
+      "createdById": "0055g00000ENGUyAAP",
+      "createdByName": "Prince Varghese V",
+      "createdDate": "2022-09-16T12:24:30.000Z",
+      "fileName": "aura/setStartUrl",
+      "fullName": "setStartUrl",
+      "id": "0Ab5g000004cBgYCAU",
+      "lastModifiedById": "0055g00000ENGUyAAP",
+      "lastModifiedByName": "Prince Varghese V",
+      "lastModifiedDate": "2022-11-14T15:16:42.000Z",
+      "manageableState": "unmanaged",
+      "type": "AuraDefinitionBundle"
+    },
+    {
+      "createdById": "0055g00000ENGUyAAP",
+      "createdByName": "Prince Varghese V",
+      "createdDate": "2022-09-16T12:24:31.000Z",
+      "fileName": "aura/forgotPassword",
+      "fullName": "forgotPassword",
+      "id": "0Ab5g000004cBgbCAE",
+      "lastModifiedById": "0055g00000ENGUyAAP",
+      "lastModifiedByName": "Prince Varghese V",
+      "lastModifiedDate": "2022-11-14T15:16:42.000Z",
+      "manageableState": "unmanaged",
+      "type": "AuraDefinitionBundle"
+    }
+  ]
+}

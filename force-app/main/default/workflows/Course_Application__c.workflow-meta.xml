@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Conditional_Approval_Emil_Alert</fullName>
+        <description>Conditional Approval Emil Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Conditional_Approval_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Email_for_approval</fullName>
+        <description>Send Email for approval</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Send_Email_Conditional_Approval</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Owner_to_Business_Queue</fullName>
+        <field>OwnerId</field>
+        <lookupValue>Business_Faculty</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Owner to Business Queue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Owner_to_Science_Faculty</fullName>
+        <field>Status__c</field>
+        <literalValue>Queued For Assessment</literalValue>
+        <name>Owner to Science Faculty</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Owner_to_Science_Queue</fullName>
+        <field>OwnerId</field>
+        <lookupValue>Science_Faculty</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Owner to Science Faculty</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Queue_to_Update</fullName>
+        <field>Status__c</field>
+        <literalValue>Queued For Assessment</literalValue>
+        <name>Status Queue to Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_To2_Conditional_Approval</fullName>
+        <field>Status__c</field>
+        <literalValue>Under Conditional Approval</literalValue>
+        <name>Status To Conditional Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_To_Admit</fullName>
+        <field>Status__c</field>
+        <literalValue>Closed Admit Applicant</literalValue>
+        <name>Status To Admit</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_To_Conditional_Approval</fullName>
+        <field>Status__c</field>
+        <literalValue>Under Conditional Approval</literalValue>
+        <name>Status To Conditional Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_To_Denied</fullName>
+        <field>Status__c</field>
+        <literalValue>Cancelled by Admissions</literalValue>
+        <name>Status To Denied</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_To_Pending_For_Business_Approval</fullName>
+        <field>Status__c</field>
+        <literalValue>Cancelled by Admissions</literalValue>
+        <name>Status To Pending For Business Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_To_Under_Assessment</fullName>
+        <field>Status__c</field>
+        <literalValue>Under Assessment</literalValue>
+        <name>Status To Under Assessment</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <outboundMessages>
+        <fullName>Send_Outbound_Message</fullName>
+        <apiVersion>55.0</apiVersion>
+        <endpointUrl>http://intg-playground.herokuapp.com/sfdc/omlistener/endpoint/ee69894d-b348-4b4c-822a-1cfb20174bfa</endpointUrl>
+        <fields>Applicant__c</fields>
+        <fields>Course__c</fields>
+        <fields>CreatedById</fields>
+        <fields>CreatedDate</fields>
+        <fields>CurrencyIsoCode</fields>
+        <fields>Decision_Notes__c</fields>
+        <fields>Education_Details__c</fields>
+        <fields>Employment_Details__c</fields>
+        <fields>Id</fields>
+        <fields>IsDeleted</fields>
+        <fields>LastActivityDate</fields>
+        <includeSessionId>false</includeSessionId>
+        <integrationUser>princem@milletechinc.com</integrationUser>
+        <name>Send Outbound Message</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <rules>
+        <fullName>Change to Under Assessment</fullName>
+        <actions>
+            <name>Status_To_Under_Assessment</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>BEGINS(OwnerId, &apos;005&apos;) &amp;&amp; BEGINS( PRIORVALUE(OwnerId),&apos;00G&apos; )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Owner to Business Queue</fullName>
+        <actions>
+            <name>Owner_to_Business_Queue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Status_Queue_to_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>ISPICKVAL(Course__r.Faculty__c , &apos;Business&apos;)  &amp;&amp;  ISPICKVAL(Status__c  , &apos;New&apos;)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Owner to Science Faculty</fullName>
+        <actions>
+            <name>Owner_to_Science_Faculty</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Owner_to_Science_Queue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>ISPICKVAL(Course__r.Faculty__c , &apos;Science&apos;)  &amp;&amp;  ISPICKVAL(Status__c  , &apos;New&apos;)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send Email Conditional Approval</fullName>
+        <actions>
+            <name>Send_Outbound_Message</name>
+            <type>OutboundMessage</type>
+        </actions>
+        <actions>
+            <name>Reminder_the_Evaluation</name>
+            <type>Task</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Course_Application__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Queued For Assessment</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Send_Email_for_approval</name>
+                <type>Alert</type>
+            </actions>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <tasks>
+        <fullName>Reminder_the_Evaluation</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>7</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Reminder the Evaluation</subject>
+    </tasks>
+</Workflow>

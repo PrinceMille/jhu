@@ -1,0 +1,96 @@
+{
+  "status": 0,
+  "result": [
+    {
+      "createdById": "0055g00000ENGUyAAP",
+      "createdByName": "Prince Varghese V",
+      "createdDate": "2022-12-13T09:39:20.000Z",
+      "fileName": "flows/criteriaprocess.flow",
+      "fullName": "criteriaprocess",
+      "id": "3015g000001pwkHAAQ",
+      "lastModifiedById": "0055g00000ENGUyAAP",
+      "lastModifiedByName": "Prince Varghese V",
+      "lastModifiedDate": "2022-12-13T09:39:54.000Z",
+      "manageableState": "unmanaged",
+      "type": "Flow"
+    },
+    {
+      "createdById": "0055g00000E11zaAAB",
+      "createdByName": "Automated Process",
+      "createdDate": "2022-09-20T07:50:54.000Z",
+      "fileName": "flows/customer_satisfaction.flow",
+      "fullName": "customer_satisfaction",
+      "id": "3015g0000010fqPAAQ",
+      "lastModifiedById": "0055g00000E11zaAAB",
+      "lastModifiedByName": "Automated Process",
+      "lastModifiedDate": "2022-09-20T07:50:55.000Z",
+      "manageableState": "unmanaged",
+      "type": "Flow"
+    },
+    {
+      "createdById": "0055g00000ENGUyAAP",
+      "createdByName": "Prince Varghese V",
+      "createdDate": "2023-01-17T13:20:04.000Z",
+      "fileName": "flows/test234.flow",
+      "fullName": "test234",
+      "id": "3015g000001q4sJAAQ",
+      "lastModifiedById": "0055g00000ENGUyAAP",
+      "lastModifiedByName": "Prince Varghese V",
+      "lastModifiedDate": "2023-01-17T13:20:05.000Z",
+      "manageableState": "unmanaged",
+      "type": "Flow"
+    },
+    {
+      "createdById": "0055g00000ENGUyAAP",
+      "createdByName": "Prince Varghese V",
+      "createdDate": "2022-09-07T11:20:47.000Z",
+      "fileName": "flows/Owner_To_Business_Faculty.flow",
+      "fullName": "Owner_To_Business_Faculty",
+      "id": "3015g0000010amaAAA",
+      "lastModifiedById": "0055g00000ENGUyAAP",
+      "lastModifiedByName": "Prince Varghese V",
+      "lastModifiedDate": "2022-09-07T11:20:52.000Z",
+      "manageableState": "unmanaged",
+      "type": "Flow"
+    },
+    {
+      "createdById": "0055g00000E11zaAAB",
+      "createdByName": "Automated Process",
+      "createdDate": "2022-09-20T07:50:51.000Z",
+      "fileName": "flows/net_promoter_score.flow",
+      "fullName": "net_promoter_score",
+      "id": "3015g0000010fqJAAQ",
+      "lastModifiedById": "0055g00000E11zaAAB",
+      "lastModifiedByName": "Automated Process",
+      "lastModifiedDate": "2022-09-20T07:50:53.000Z",
+      "manageableState": "unmanaged",
+      "type": "Flow"
+    },
+    {
+      "createdById": "0055g00000ENGUyAAP",
+      "createdByName": "Prince Varghese V",
+      "createdDate": "2022-12-13T09:13:57.000Z",
+      "fileName": "flows/test.flow",
+      "fullName": "test",
+      "id": "3015g000001pwipAAA",
+      "lastModifiedById": "0055g00000ENGUyAAP",
+      "lastModifiedByName": "Prince Varghese V",
+      "lastModifiedDate": "2022-12-13T09:13:58.000Z",
+      "manageableState": "unmanaged",
+      "type": "Flow"
+    },
+    {
+      "createdById": "0055g00000ENGUyAAP",
+      "createdByName": "Prince Varghese V",
+      "createdDate": "2022-12-13T09:46:36.000Z",
+      "fileName": "flows/emailtest.flow",
+      "fullName": "emailtest",
+      "id": "3015g000001pwkgAAA",
+      "lastModifiedById": "0055g00000ENGUyAAP",
+      "lastModifiedByName": "Prince Varghese V",
+      "lastModifiedDate": "2022-12-13T09:46:37.000Z",
+      "manageableState": "unmanaged",
+      "type": "Flow"
+    }
+  ]
+}

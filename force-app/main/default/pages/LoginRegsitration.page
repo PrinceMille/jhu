@@ -1,0 +1,84 @@
+<apex:page sidebar="false" showHeader="false" standardController="Registration__c" extensions="LoginRegistrationExt">
+
+<apex:stylesheet value="{!$Resource.LoginStyles}"/>
+
+<h1 class="style" > InLine Styles </h1>
+  <apex:form >
+  
+   <apex:pagemessages id="pgMsgId" > </apex:pagemessages>
+  
+       <apex:pageBlock title="Login Regsitration" mode="edit" id="pbId">
+       
+           <apex:pageBlockSection title="Please Register">
+               <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="First Name"> </apex:outputlabel> 
+                     <apex:inputField value="{!Registration__c.First_Name__c}"/>  
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="last Name"> </apex:outputlabel>
+                    <apex:inputField value="{!Registration__c.Last_Name__c}" required="true"/>  
+                 </apex:pageBlockSectionItem>
+                 
+                  <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="DOB">  </apex:outputlabel>
+                     <apex:inputField value="{!Registration__c.DOB__c}"  required="true"/>    
+                </apex:pageBlockSectionItem>
+                
+                 <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="Email"> </apex:outputlabel>
+                     <apex:inputField value="{!Registration__c.Email__c}"  required="true"/>  
+                </apex:pageBlockSectionItem>
+                
+                 <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="Password"> </apex:outputlabel>
+                     <apex:inputSecret value="{!Registration__c.Password__c}"  required="true"/>    
+                </apex:pageBlockSectionItem>
+                
+                 <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="Confirm Passsword">  </apex:outputlabel> 
+                     <apex:inputSecret value="{!confirmPwd}" />
+                </apex:pageBlockSectionItem>
+                
+                 <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Country">  </apex:outputlabel>
+                    <apex:inputField value="{!Registration__c.Country__c}"  required="true"/>    
+                </apex:pageBlockSectionItem>
+                
+                 <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="City">  </apex:outputlabel> 
+                     
+                     <apex:actionRegion >
+                     <apex:inputField value="{!Registration__c.City__c}"> 
+                     
+                     <apex:actionSupport event="onchange" reRender="pgMsgId,pbId"/>
+                     
+                     </apex:inputField>
+                     
+                     </apex:actionRegion>  
+                </apex:pageBlockSectionItem>
+                
+                 <apex:pageBlockSectionItem >
+                     <apex:outputPanel > 
+                     {!cityMsg}
+                       
+                     </apex:outputPanel>
+                    
+                </apex:pageBlockSectionItem>
+                
+           </apex:pageBlockSection>
+           
+           <apex:pageBlockSection >
+           
+           </apex:pageBlockSection>
+        
+          <apex:panelGrid columns="3">
+            <apex:commandButton value="Submit" action="{!save}"/>
+            <apex:commandButton value="Cancel" immediate="true" action="/apex/LoginRegistration" />
+            <apex:commandButton value="Back To Login" action="/apex/LoginHome" immediate="true" />
+            
+          </apex:panelGrid>
+        
+         </apex:pageBlock> 
+  </apex:form>
+</apex:page>

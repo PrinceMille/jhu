@@ -1,0 +1,57 @@
+<apex:page standardController="Account">
+ 
+  
+  <style>
+   
+    .activeTab {background-color: coral;}
+    .inactiveTab { background-color: yellow;}
+  </style>
+  
+  <apex:tabPanel switchType="client" selectedTab="account"  id="AccountTabPanel" tabClass="activeTab" inactiveTabClass="inactiveTab">
+  
+      <apex:tab label="Account" name="account" id="accountId">
+           <apex:detail relatedList="false"/>
+      </apex:tab>
+      
+       <apex:tab label="Contacts" name="contacts" id="contactsId">
+           
+           <apex:form >
+           <apex:repeat value="{!Account.contacts}" var="con">
+           
+               <apex:pageBlock title="{!con.Name}">
+               
+                 <apex:pageBlockSection >
+               
+                   <apex:outputField value="{!con.Name}"/>
+                    <apex:outputField value="{!con.Title}"/>
+                   <apex:outputField value="{!con.Email}"/>
+                   <apex:outputField value="{!con.Phone}"/>
+                   
+                 </apex:pageBlockSection>
+                
+                 <apex:pageBlockButtons location="bottom">
+                     <apex:commandButton value="Edit" action="/{!con.Id}/e?retURL=/{!Account.Id}?tabName=contacts" />
+                     <apex:commandButton value="Delete" onclick="return confirm('Are you sure?)" action="{!URLFOR($Action.Contact.Delete,con.id,['retURL'=Id+'?tabName=contacts'])}"/>
+
+                </apex:pageBlockButtons>      
+                 
+               </apex:pageBlock>
+           </apex:repeat>
+           </apex:form>
+           
+           
+           
+      </apex:tab>
+      
+       <apex:tab label="Opportunities" name="opportunities" id="opportunitiesId">
+           <apex:relatedList list="opportunities"/>
+      </apex:tab>  
+      
+       <apex:tab label="Cases" name="cases" id="casesId">
+           <apex:relatedList list="cases"/>
+      </apex:tab>   
+         
+  
+  </apex:tabPanel>
+  
+</apex:page>

@@ -1,0 +1,81 @@
+<apex:page controller="AjaxDemoCntrl" id="pageControllerId" contentType="application/vnd.ms-excel" >
+
+     <apex:outputPanel onmouseover="changeColorMethodDemo();" id="welcomeMsgId">
+ 
+         Welcome To ajax
+ 
+     </apex:outputPanel>
+  
+  <apex:form id="formId" >
+  
+      <apex:actionFunction name="callColorMethod" action="{!changeColor}" reRender="welcomeMsgId"/>
+  
+      <apex:pageBlock title="Ajax Functions Demo" mode="edit" id="pbId">
+      
+        <apex:pageBlockSection title="Country Selection" id="pbBlockId">
+        
+          <apex:pageblockSectionItem id="pbsId">
+        
+               <apex:outputLabel value="Country"> </apex:outputLabel>
+           
+                <apex:selectList size="1" value="{!selVal}" id="selValId">
+                
+                    <apex:selectOptions value="{!options}"> </apex:selectOptions>
+                               
+                    <apex:actionSupport event="onchange" reRender="pbId"/>
+            
+                </apex:selectList> 
+                
+           </apex:pageblockSectionItem>
+            
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection title="Country">
+        
+            <apex:outputField value="{!country.MasterLabel}" label="Country"/>
+            
+            <apex:outputField value="{!country.Capital_City__c}"/>
+            
+            <apex:outputField value="{!country.Continent__c}"/>
+            
+            <apex:outputField value="{!country.ISD_Code__c}"/>
+        
+        
+        </apex:pageBlockSection>
+      
+        <apex:pageBlockSection title="Country Buttons">
+       
+          <apex:repeat value="{!options}" var="option"> 
+                   
+              <apex:commandButton value="{!option.Label}" reRender="pbId">
+              
+              <apex:param name="country" value="{!option.Label}" assignTo="{!selVal}" />
+              
+              </apex:commandButton>
+              
+          </apex:repeat> 
+       
+        </apex:pageBlockSection>
+      
+      </apex:pageBlock>
+  
+  </apex:form>
+  
+  <script>
+  
+     function changeColorMethodDemo(){
+             
+         var selVal = document.getElementById("pageControllerId:formId:pbId:pbBlockId:pbsId:selValId").value;
+         
+       
+          if (selVal === 'USA'){
+         
+          
+                 callColorMethod();      
+           }
+     }
+     
+  </script>
+  
+  
+</apex:page>

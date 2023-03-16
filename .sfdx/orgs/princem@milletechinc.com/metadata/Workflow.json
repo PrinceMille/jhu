@@ -1,0 +1,31 @@
+{
+  "status": 0,
+  "result": [
+    {
+      "createdById": "0055g00000ENGUyAAP",
+      "createdByName": "Prince Varghese V",
+      "createdDate": "2022-08-26T14:08:42.000Z",
+      "fileName": "Workflow/Course_Application__c.workflow",
+      "fullName": "Course_Application__c",
+      "id": "01I5g00000305cbEAA",
+      "lastModifiedById": "0055g00000ENGUyAAP",
+      "lastModifiedByName": "Prince Varghese V",
+      "lastModifiedDate": "2022-09-08T09:21:51.000Z",
+      "manageableState": "unmanaged",
+      "type": "Workflow"
+    },
+    {
+      "createdById": "0055g00000ENGUyAAP",
+      "createdByName": "Prince Varghese V",
+      "createdDate": "1970-01-01T00:00:00.000Z",
+      "fileName": "workflows/Case.workflow",
+      "fullName": "Case",
+      "id": "",
+      "lastModifiedById": "0055g00000ENGUyAAP",
+      "lastModifiedByName": "Prince Varghese V",
+      "lastModifiedDate": "1970-01-01T00:00:00.000Z",
+      "namespacePrefix": "",
+      "type": "Workflow"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+<apex:page standardController="Course_Application__c">
+ 
+ <center>
+  <apex:outputPanel style="color:red;" rendered="{!Course_Application__c.Status__c == 'New'}">
+  
+   Please submit the approval
+   
+   </apex:outputPanel>
+   
+   </center>
+ 
+</apex:page>

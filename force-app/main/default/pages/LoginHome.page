@@ -1,0 +1,30 @@
+<apex:page sidebar="false" showHeader="false" controller="LoginHomeCtrl">
+  <apex:form >
+  
+       <apex:pageBlock title="Login" mode="edit">
+       
+           <apex:pageBlockSection title="Please Login">
+               <apex:pageBlockSectionItem >
+                     <apex:outputLabel > Username </apex:outputLabel>
+                     <apex:inputText value="{!username}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel > Password</apex:outputLabel>
+                    
+                    <apex:inputSecret value="{!password}"/>
+                 </apex:pageBlockSectionItem>
+           </apex:pageBlockSection>
+           
+           <apex:pageBlockSection >
+           
+           </apex:pageBlockSection>
+        
+          <apex:panelGrid columns="3">
+            <apex:commandButton value="Login" action="{!validateLogin}" />
+            <apex:commandButton value="Cancel"/>
+            <apex:commandButton value="Register"/>
+          </apex:panelGrid>
+        
+         </apex:pageBlock> 
+  </apex:form>
+</apex:page>

@@ -1,0 +1,34 @@
+<apex:page controller="CustomListControl">
+ 
+ <apex:form >
+        <apex:pageblock title="Custom List Controller" id="pbId">
+        
+         <apex:pageBlockTable value="{!accounts}" var="acc">
+         
+           <apex:column value="{!acc.Name}"/>
+           
+           <apex:column value="{!acc.Industry}"/>
+           
+           <apex:column value="{!acc.Rating}"/>
+         
+         </apex:pageBlockTable>
+         
+             <apex:panelGrid columns="4" >
+             
+                 <apex:commandButton value="First" action="{!con.first}" disabled="{!!con.hasPrevious}" reRender="pbId" status="actStatId" />
+                 
+                 <apex:commandButton value="Previous" action="{!con.previous}" disabled="{!!con.hasPrevious}" reRender="pbId" status="actStatId" />
+                 
+                 <apex:commandButton value="Next" action="{!con.next}" disabled="{!!con.hasNext}" reRender="pbId" status="actStatId" />
+                 
+                 <apex:commandButton value="Last" action="{!con.last}" disabled="{!!con.hasNext}" reRender="pbId" status="actStatId" />
+                 
+                 <apex:actionStatus startText="Fetching...." startStyle="color:blue" id="actStatId"> </apex:actionStatus>
+         
+             </apex:panelGrid>
+        
+        </apex:pageblock>
+        
+    </apex:form>
+ 
+</apex:page>
